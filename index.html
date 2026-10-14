@@ -1,0 +1,1321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crestline Trade Group | Canadian B2B Trading & Distribution</title>
+  <meta name="description" content="Crestline Trade Group is a Canadian-based B2B trading and distribution company connecting international suppliers, mainly from Sri Lanka, with buyers in Canada." />
+  <meta name="keywords" content="Crestline Trade Group, Canadian trading company, B2B distribution Canada, Sri Lanka suppliers, import export Canada, product sourcing Canada, global trade company" />
+  <meta name="author" content="Crestline Trade Group" />
+  <meta name="robots" content="index, follow" />
+
+  <meta property="og:title" content="Crestline Trade Group | Canadian B2B Trading & Distribution" />
+  <meta property="og:description" content="Connecting trusted international suppliers with Canadian buyers through sourcing, logistics, and distribution support." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="hero-port.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Crestline Trade Group" />
+  <meta name="twitter:description" content="Connecting global supply to Canadian markets." />
+  <meta name="twitter:image" content="hero-port.jpg" />
+
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --black: #0B0B0B;
+      --black2: #050505;
+      --white: #FFFFFF;
+      --gold: #D6B24A;
+      --gold-light: #F4D879;
+      --gold-dark: #8A6414;
+      --muted: rgba(255,255,255,0.68);
+      --border: rgba(255,255,255,0.16);
+      --light: #F7F7F2;
+      --light-text: #0B0B0B;
+      --light-muted: #555555;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    section,
+    #suppliers,
+    #buyers,
+    #supplier-process,
+    #buyer-process,
+    #about,
+    #apply,
+    #contact {
+      scroll-margin-top: 90px;
+    }
+
+    body {
+      font-family: Inter, Arial, sans-serif;
+      background: var(--black);
+      color: var(--white);
+      line-height: 1.45;
+      overflow-x: hidden;
+    }
+
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+    .container { width: min(1180px, 92%); margin: 0 auto; }
+
+    .topbar {
+      position: fixed;
+      inset: 0 0 auto 0;
+      z-index: 1000;
+      height: 74px;
+      background: var(--black);
+      border-bottom: 1px solid rgba(255,255,255,.18);
+    }
+
+    .nav {
+      height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 13px;
+      font-weight: 800;
+      min-width: 0;
+      overflow: visible;
+    }
+
+    .brand-logo {
+      width: 172px;
+      height: auto;
+      max-height: 54px;
+      object-fit: contain;
+      display: block;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      font-size: 12px;
+      color: rgba(255,255,255,.9);
+    }
+
+    .nav-links a {
+      position: relative;
+      padding: 29px 0;
+    }
+
+    .nav-links a:hover::after,
+    .nav-links a.active::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 20px;
+      height: 2px;
+      background: var(--gold);
+    }
+
+    .nav-cta {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 12px 25px;
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 700;
+      transition: .25s ease;
+      white-space: nowrap;
+    }
+
+    .nav-cta:hover {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+      color: var(--black);
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: 0;
+      color: var(--white);
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 560px;
+      padding-top: 74px;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(11,11,11,.95) 0%, rgba(11,11,11,.82) 38%, rgba(11,11,11,.28) 100%),
+        url('hero-port.jpg') center right/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      left: 7.5%;
+      top: 21%;
+      width: 520px;
+      height: 310px;
+      opacity: .34;
+      background-image: radial-gradient(rgba(255,255,255,.75) 1.15px, transparent 1.15px);
+      background-size: 11px 11px;
+      mask-image: radial-gradient(ellipse at center, #000 0 62%, transparent 73%);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 650px;
+      padding: 68px 0 78px;
+    }
+
+    .hero h1 {
+      font-size: clamp(42px, 5.6vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -2.3px;
+      margin-bottom: 23px;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      color: var(--gold);
+      display: block;
+    }
+
+    .hero p {
+      max-width: 540px;
+      font-size: 17px;
+      color: rgba(255,255,255,.88);
+      margin-bottom: 31px;
+    }
+
+    .btn-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      min-height: 52px;
+      padding: 0 28px;
+      border-radius: 3px;
+      font-weight: 700;
+      font-size: 14px;
+      transition: .25s ease;
+      border: 1px solid transparent;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+      color: var(--white);
+      box-shadow: 0 14px 35px rgba(214,178,74,.24);
+    }
+
+    .btn-outline {
+      border-color: rgba(214,178,74,.9);
+      color: var(--white);
+      background: rgba(11,11,11,.15);
+    }
+
+    .btn:hover { transform: translateY(-3px); }
+
+    .feature-strip {
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      background: var(--black2);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+    }
+
+    .feature {
+      padding: 34px 34px 39px;
+      border-right: 1px solid rgba(255,255,255,.18);
+      min-height: 170px;
+    }
+
+    .feature:first-child {
+      border-left: 1px solid rgba(255,255,255,.18);
+    }
+
+    .feature-icon {
+      font-size: 40px;
+      color: var(--gold);
+      margin-bottom: 17px;
+      line-height: 1;
+    }
+
+    .svg-icon svg {
+      width: 46px;
+      height: 46px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 3.2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .feature .svg-icon { margin-bottom: 18px; }
+    .feature h3 { font-size: 18px; margin-bottom: 8px; font-weight: 600; }
+    .feature p { color: rgba(255,255,255,.66); font-size: 14px; max-width: 210px; }
+
+    .split-section {
+      background: var(--light);
+      color: var(--light-text);
+      padding: 58px 0;
+    }
+
+    .split-grid {
+      display: grid;
+      grid-template-columns: 1fr 1px 1fr;
+      gap: 44px;
+      align-items: stretch;
+    }
+
+    .divider { background: rgba(11,11,11,.25); }
+
+    .split-card {
+      display: grid;
+      grid-template-columns: 1fr 245px;
+      gap: 28px;
+      align-items: center;
+      min-height: 290px;
+    }
+
+    .eyebrow {
+      text-transform: uppercase;
+      color: var(--gold);
+      font-size: 12px;
+      letter-spacing: .13em;
+      font-weight: 800;
+      margin-bottom: 15px;
+    }
+
+    .split-card h2 {
+      font-size: 31px;
+      line-height: 1.1;
+      letter-spacing: -1px;
+      margin-bottom: 17px;
+      font-weight: 600;
+    }
+
+    .split-card p {
+      color: var(--light-muted);
+      font-size: 14px;
+      margin-bottom: 23px;
+    }
+
+    .image-box {
+      height: 275px;
+      border-radius: 0 28px 0 0;
+      overflow: hidden;
+      border-bottom: 2px solid var(--gold);
+    }
+
+    .image-box.ship { background: url('supplier-ship.jpg') center/cover; }
+    .image-box.warehouse { background: url('buyer-warehouse.jpg') center/cover; }
+
+    .about-modern {
+      background: var(--black2);
+      padding: 88px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .about-modern::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      opacity: .11;
+      background-image: radial-gradient(rgba(255,255,255,.9) 1px, transparent 1px);
+      background-size: 13px 13px;
+      mask-image: radial-gradient(circle at 72% 28%, #000 0 24%, transparent 45%);
+    }
+
+    .about-modern-grid {
+      position: relative;
+      z-index: 2;
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .about-modern h2,
+    .why-choose h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -1.5px;
+      margin-bottom: 22px;
+      font-weight: 700;
+    }
+
+    .about-modern p {
+      color: rgba(255,255,255,.74);
+      font-size: 15.5px;
+      margin-bottom: 18px;
+      max-width: 620px;
+    }
+
+    .about-highlight-box {
+      border: 1px solid rgba(214,178,74,.38);
+      background: linear-gradient(145deg, rgba(214,178,74,.13), rgba(255,255,255,.035));
+      padding: 34px;
+      border-radius: 4px;
+      box-shadow: 0 24px 70px rgba(0,0,0,.22);
+    }
+
+    .about-highlight-box h3 {
+      color: var(--gold);
+      font-size: 24px;
+      line-height: 1.2;
+      margin-bottom: 16px;
+      font-weight: 600;
+    }
+
+    .about-highlight-box p {
+      margin-bottom: 0;
+      font-size: 14.5px;
+    }
+
+    .about-points {
+      display: grid;
+      gap: 15px;
+      margin-top: 26px;
+    }
+
+    .about-point {
+      display: flex;
+      gap: 13px;
+      align-items: flex-start;
+      color: rgba(255,255,255,.78);
+      font-size: 14.5px;
+    }
+
+    .about-point span {
+      color: var(--gold);
+      font-weight: 800;
+      margin-top: 1px;
+    }
+
+    .why-choose {
+      background: var(--light);
+      color: var(--light-text);
+      padding: 82px 0;
+    }
+
+    .why-header {
+      max-width: 720px;
+      margin-bottom: 42px;
+    }
+
+    .why-header p {
+      color: var(--light-muted);
+      font-size: 15.5px;
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .why-card {
+      background: var(--white);
+      border: 1px solid rgba(11,11,11,.1);
+      padding: 32px 28px;
+      min-height: 255px;
+      border-radius: 4px;
+      box-shadow: 0 20px 60px rgba(11,11,11,.07);
+      transition: .25s ease;
+    }
+
+    .why-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(214,178,74,.55);
+    }
+
+    .why-number {
+      width: 46px;
+      height: 46px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+      color: var(--black);
+      font-size: 14px;
+      font-weight: 800;
+      margin-bottom: 23px;
+    }
+
+    .why-card h3 {
+      font-size: 21px;
+      line-height: 1.2;
+      margin-bottom: 13px;
+      font-weight: 650;
+    }
+
+    .why-card p {
+      color: var(--light-muted);
+      font-size: 14px;
+    }
+
+    .process-section {
+      background: var(--black2);
+      color: var(--white);
+      padding: 84px 0;
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+
+    .process-section.light-process {
+      background: var(--light);
+      color: var(--light-text);
+      border-top: 0;
+    }
+
+    .process-header {
+      max-width: 760px;
+      margin-bottom: 44px;
+    }
+
+    .process-header h2 {
+      font-size: clamp(32px, 4vw, 46px);
+      line-height: 1.08;
+      letter-spacing: -1.4px;
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .process-header p {
+      color: rgba(255,255,255,.72);
+      font-size: 15.5px;
+    }
+
+    .light-process .process-header p {
+      color: var(--light-muted);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(255,255,255,.035);
+    }
+
+    .light-process .process-steps {
+      border: 1px solid rgba(11,11,11,.12);
+      background: var(--white);
+      box-shadow: 0 20px 60px rgba(11,11,11,.07);
+    }
+
+    .process-step {
+      position: relative;
+      padding: 34px 26px;
+      min-height: 260px;
+      border-right: 1px solid rgba(255,255,255,.16);
+    }
+
+    .light-process .process-step {
+      border-right: 1px solid rgba(11,11,11,.11);
+    }
+
+    .process-step:last-child {
+      border-right: 0;
+    }
+
+    .process-step::after {
+      content: "→";
+      position: absolute;
+      top: 38px;
+      right: -12px;
+      z-index: 2;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--black);
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .process-step:last-child::after {
+      display: none;
+    }
+
+    .step-badge {
+      width: 52px;
+      height: 52px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold-light), var(--gold), var(--gold-dark));
+      color: var(--black);
+      font-weight: 800;
+      font-size: 14px;
+      margin-bottom: 22px;
+    }
+
+    .process-step h3 {
+      font-size: 20px;
+      line-height: 1.2;
+      margin-bottom: 13px;
+      font-weight: 650;
+    }
+
+    .process-step p {
+      color: rgba(255,255,255,.68);
+      font-size: 14px;
+    }
+
+    .light-process .process-step p {
+      color: var(--light-muted);
+    }
+
+    .process-note {
+      margin-top: 28px;
+      padding: 24px 28px;
+      border-left: 3px solid var(--gold);
+      background: rgba(214,178,74,.09);
+      color: rgba(255,255,255,.76);
+      font-size: 14.5px;
+    }
+
+    .light-process .process-note {
+      color: var(--light-muted);
+      background: rgba(214,178,74,.12);
+    }
+
+    .apply {
+      background: var(--light);
+      color: var(--light-text);
+      padding: 78px 0;
+    }
+
+    .apply-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 42px;
+      align-items: start;
+    }
+
+    .apply h2 {
+      font-size: 38px;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .apply p { color: var(--light-muted); }
+
+    form {
+      background: var(--white);
+      border: 1px solid rgba(11,11,11,.1);
+      padding: 30px;
+      border-radius: 4px;
+      box-shadow: 0 24px 70px rgba(11,11,11,.08);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    label {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      border: 1px solid rgba(11,11,11,.17);
+      border-radius: 3px;
+      padding: 14px;
+      font: inherit;
+      outline: none;
+    }
+
+    textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .field { margin-bottom: 16px; }
+    input:focus, textarea:focus { border-color: var(--gold); }
+    button { cursor: pointer; border: 0; }
+
+    .contact {
+      background: var(--black2);
+      border-top: 1px solid rgba(214,178,74,.42);
+      border-bottom: 1px solid rgba(214,178,74,.42);
+      padding: 58px 0;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, .95fr);
+      gap: 70px;
+      align-items: center;
+      max-width: 1100px;
+    }
+
+    .contact h2 {
+      font-size: 35px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    .contact h2 span {
+      color: var(--gold);
+      display: block;
+    }
+
+    .contact p {
+      color: rgba(255,255,255,.7);
+      font-size: 14px;
+    }
+
+    .contact-info {
+      border-left: 1px solid rgba(255,255,255,.18);
+      padding: 10px 0 10px 56px;
+      display: grid;
+      gap: 29px;
+    }
+
+    .info-item {
+      display: flex;
+      gap: 17px;
+      align-items: flex-start;
+    }
+
+    .info-icon {
+      color: var(--gold);
+      font-size: 30px;
+      width: 36px;
+    }
+
+    .svg-contact-icon svg {
+      width: 34px;
+      height: 34px;
+      stroke: var(--gold);
+      fill: none;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .whatsapp-card .btn {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    footer {
+      background: var(--black);
+      padding: 34px 0;
+      color: rgba(255,255,255,.58);
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: .75fr 1.6fr 1fr;
+      gap: 32px;
+      align-items: center;
+      font-size: 12px;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: nowrap;
+    }
+
+    .footer-links a {
+      white-space: nowrap;
+    }
+
+    .copyright { text-align: right; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(26px);
+      transition: .8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1100px) {
+      .nav-links { gap: 18px; }
+      .features { grid-template-columns: repeat(2,1fr); }
+      .feature:nth-child(odd) { border-left: 1px solid rgba(255,255,255,.18); }
+      .split-card { grid-template-columns: 1fr; }
+      .image-box { height: 240px; }
+      .why-grid { grid-template-columns: repeat(2,1fr); }
+      .process-steps { grid-template-columns: repeat(2,1fr); }
+      .process-step:nth-child(2) { border-right: 0; }
+      .process-step:nth-child(2)::after { display: none; }
+      .process-step:nth-child(1), .process-step:nth-child(2) { border-bottom: 1px solid rgba(255,255,255,.16); }
+      .light-process .process-step:nth-child(1), .light-process .process-step:nth-child(2) { border-bottom: 1px solid rgba(11,11,11,.11); }
+    }
+
+    @media (max-width: 980px) {
+      .menu-btn { display: block; }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 74px;
+        background: var(--black);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 4%;
+        gap: 0;
+        border-bottom: 1px solid rgba(255,255,255,.16);
+      }
+
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 14px 0; width: 100%; }
+      .nav-links a::after { display: none; }
+      .nav-cta { display: none; }
+
+      .contact-grid,
+      .apply-grid,
+      .about-modern-grid,
+      .why-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .split-grid {
+        grid-template-columns: 1fr;
+        gap: 34px;
+      }
+
+      .divider { display: none; }
+      .contact-info { border: 0; padding: 0; }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .copyright { text-align: center; }
+      .footer-links { flex-wrap: wrap; }
+    }
+
+    @media (max-width: 680px) {
+      .container { width: min(100% - 32px, 1180px); }
+      .topbar, .nav { height: 68px; }
+      .nav-links { top: 68px; }
+      .brand-logo { width: 132px; max-height: 44px; }
+
+      .hero {
+        min-height: 610px;
+        padding-top: 68px;
+        background-position: 67% center;
+      }
+
+      .hero::before {
+        left: -8%;
+        top: 22%;
+        width: 410px;
+        opacity: .24;
+      }
+
+      .hero-content {
+        padding: 72px 0;
+        max-width: 100%;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+        letter-spacing: -1.4px;
+      }
+
+      .hero p { font-size: 16px; }
+      .btn-row, .form-row { display: grid; grid-template-columns: 1fr; }
+      .btn { width: 100%; }
+      .features,
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step,
+      .process-step:nth-child(2) {
+        border-right: 0;
+        border-bottom: 1px solid rgba(255,255,255,.16);
+      }
+
+      .light-process .process-step,
+      .light-process .process-step:nth-child(2) {
+        border-bottom: 1px solid rgba(11,11,11,.11);
+      }
+
+      .process-step:last-child {
+        border-bottom: 0;
+      }
+
+      .process-step::after {
+        content: "↓";
+        top: auto;
+        right: auto;
+        left: 26px;
+        bottom: -12px;
+      }
+
+      .process-step:nth-child(2)::after {
+        display: flex;
+      }
+
+      .process-step:last-child::after {
+        display: none;
+      }
+
+      .feature,
+      .feature:first-child,
+      .feature:nth-child(odd) {
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .split-section,
+      .about-modern,
+      .why-choose,
+      .apply,
+      .contact {
+        padding: 58px 0;
+      }
+
+      .split-card h2,
+      .apply h2,
+      .contact h2 {
+        font-size: 30px;
+      }
+
+      .about-highlight-box,
+      .why-card,
+      form {
+        padding: 22px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .hero h1 { font-size: 36px; }
+      .hero { min-height: 560px; }
+      .feature, .why-card { padding-left: 22px; padding-right: 22px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="#home" class="brand">
+        <img src="logo.png" alt="Crestline Trade Group Logo" class="brand-logo">
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#home" class="active">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#suppliers">For Suppliers</a>
+        <a href="#buyers">For Buyers</a>
+        <a href="#apply">Apply</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a href="#apply" class="nav-cta">Apply Now</a>
+      <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-content reveal">
+          <h1>Connecting <span>Global Supply</span> to Canadian Markets.</h1>
+          <p>Crestline Trade Group is a Canadian-based trading and distribution company connecting trusted international suppliers with Canadian businesses.</p>
+          <div class="btn-row">
+            <a href="#suppliers" class="btn btn-gold">For Suppliers <span>→</span></a>
+            <a href="#buyers" class="btn btn-outline">For Buyers <span>→</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-strip">
+      <div class="container features">
+        <div class="feature reveal">
+          <div class="feature-icon svg-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24"></circle><path d="M8 32h48M32 8c8 8 12 16 12 24S40 48 32 56M32 8C24 16 20 24 20 32s4 16 12 24M14 22h36M14 42h36"></path></svg>
+          </div>
+          <h3>Global Network</h3>
+          <p>Connecting reliable suppliers across key markets.</p>
+        </div>
+
+        <div class="feature reveal">
+          <div class="feature-icon svg-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M32 7l21 8v15c0 14-8.8 23-21 27C19.8 53 11 44 11 30V15l21-8z"></path><path d="M23 32l6 6 13-15"></path></svg>
+          </div>
+          <h3>Trusted Access</h3>
+          <p>We manage supplier vetting and quality assurance.</p>
+        </div>
+
+        <div class="feature reveal">
+          <div class="feature-icon svg-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M7 18h30v25H7zM37 27h10l8 9v7H37z"></path><circle cx="20" cy="47" r="5"></circle><circle cx="47" cy="47" r="5"></circle><path d="M13 26h14M13 34h18"></path></svg>
+          </div>
+          <h3>Efficient Logistics</h3>
+          <p>Streamlined shipping and distribution to Canada.</p>
+        </div>
+
+        <div class="feature reveal">
+          <div class="feature-icon svg-icon">
+            <svg viewBox="0 0 64 64" aria-hidden="true"><path d="M21 34l8 8c2 2 5 2 7 0l15-15"></path><path d="M28 21l-6-5-15 15 14 14 8-8"></path><path d="M36 21l6-5 15 15-14 14-8-8"></path><path d="M24 28l8-8 10 10"></path><path d="M29 42l-5 5M35 42l-5 5M40 38l-5 5"></path></svg>
+          </div>
+          <h3>Long-Term Partnerships</h3>
+          <p>Building sustainable relationships for mutual growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="split-section">
+      <div class="container split-grid">
+        <div class="split-card reveal" id="suppliers">
+          <div>
+            <div class="eyebrow">For Suppliers</div>
+            <h2>Grow Your Business in Canada</h2>
+            <p>We work with serious manufacturers and exporters to bring their products to the Canadian market through trusted, long-term partnerships.</p>
+            <a href="#supplier-process" class="btn btn-gold">Learn More <span>→</span></a>
+          </div>
+          <div class="image-box ship"></div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="split-card reveal" id="buyers">
+          <div>
+            <div class="eyebrow">For Buyers</div>
+            <h2>Reliable Sourcing. Consistent Supply.</h2>
+            <p>We help Canadian businesses source quality products from trusted international suppliers with transparency and reliability.</p>
+            <a href="#buyer-process" class="btn btn-gold">Learn More <span>→</span></a>
+          </div>
+          <div class="image-box warehouse"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section" id="supplier-process">
+      <div class="container">
+        <div class="process-header reveal">
+          <div class="eyebrow">For Suppliers</div>
+          <h2>The process of working with Crestline as a supplier.</h2>
+          <p>We work with selected suppliers through a structured process designed to understand your products, assess market readiness, and prepare a professional path toward Canadian buyers.</p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <div class="step-badge">01</div>
+            <h3>Submit Your Application</h3>
+            <p>Tell us about your company, product category, production capacity, pricing, packaging, and current export readiness.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-badge">02</div>
+            <h3>Product Review</h3>
+            <p>Our team reviews your product quality, market fit, presentation, supplier reliability, and potential demand in Canada.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-badge">03</div>
+            <h3>Market Preparation</h3>
+            <p>If selected, we help organize the information buyers need, including product details, wholesale pricing, catalogs, and positioning.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-badge">04</div>
+            <h3>Buyer Introduction</h3>
+            <p>Once your product is ready, Crestline works to connect it with suitable Canadian buyers, distributors, or business opportunities.</p>
+          </div>
+        </div>
+
+        <div class="process-note reveal">
+          Not every supplier will be accepted immediately. Crestline focuses on suppliers who are serious, responsive, and ready to build long-term business relationships in Canada.
+        </div>
+      </div>
+    </section>
+
+    <section class="process-section light-process" id="buyer-process">
+      <div class="container">
+        <div class="process-header reveal">
+          <div class="eyebrow">For Buyers</div>
+          <h2>The process of sourcing products through Crestline.</h2>
+          <p>We help Canadian buyers explore international products through a more organized sourcing process, reducing the uncertainty that often comes with finding suppliers overseas.</p>
+        </div>
+
+        <div class="process-steps">
+          <div class="process-step reveal">
+            <div class="step-badge">01</div>
+            <h3>Share Your Buying Needs</h3>
+            <p>Tell us what product categories, quantities, price ranges, quality expectations, and delivery timelines your business is looking for.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-badge">02</div>
+            <h3>Supplier Matching</h3>
+            <p>We review our supplier network and identify products or manufacturers that may be suitable for your business needs.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-badge">03</div>
+            <h3>Product & Pricing Review</h3>
+            <p>We help organize product details, pricing, samples, packaging information, and supplier communication so you can review clearly.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-badge">04</div>
+            <h3>Order & Relationship Support</h3>
+            <p>Crestline supports the next steps toward orders, repeat supply, logistics discussions, and long-term sourcing relationships.</p>
+          </div>
+        </div>
+
+        <div class="process-note reveal">
+          Our goal is to give Canadian buyers access to promising international products while keeping the process professional, practical, and relationship-focused.
+        </div>
+      </div>
+    </section>
+
+    <section class="about-modern" id="about">
+      <div class="container about-modern-grid">
+        <div class="reveal">
+          <div class="eyebrow">About Crestline Trade Group</div>
+          <h2>A Canadian trade partner connecting global suppliers with real market opportunity.</h2>
+          <p>Crestline Trade Group is a Canadian-based B2B trading and distribution company built to connect capable international suppliers with buyers and business opportunities in Canada.</p>
+          <p>Our focus is simple: identify quality products, work with serious suppliers, and build reliable pathways for those products to enter the Canadian market through professional sourcing, trading, and distribution support.</p>
+          <p>We work closely with suppliers who are ready to grow beyond their local market and buyers who need dependable access to competitive, well-presented products.</p>
+
+          <div class="about-points">
+            <div class="about-point"><span>✓</span><div>Canadian-based trade and distribution presence</div></div>
+            <div class="about-point"><span>✓</span><div>Focused on long-term supplier and buyer relationships</div></div>
+            <div class="about-point"><span>✓</span><div>Built to support sourcing, product readiness, and market access</div></div>
+          </div>
+        </div>
+
+        <div class="about-highlight-box reveal">
+          <h3>We are not just a middleman.</h3>
+          <p>Crestline is designed to act as a structured bridge between international production and Canadian demand. We help suppliers present their products professionally, understand buyer expectations, and create a smoother path toward trade-ready opportunities.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="why-choose" id="why-choose">
+      <div class="container">
+        <div class="why-header reveal">
+          <div class="eyebrow">Why Choose Crestline</div>
+          <h2>Built for suppliers who want access and buyers who need reliability.</h2>
+          <p>Crestline Trade Group brings structure, trust, and market understanding into the sourcing process, helping both sides move forward with more confidence.</p>
+        </div>
+
+        <div class="why-grid">
+          <div class="why-card reveal">
+            <div class="why-number">01</div>
+            <h3>Supplier Readiness</h3>
+            <p>We work with selected suppliers who are serious about entering the Canadian market and help position their products in a professional, buyer-ready way.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-number">02</div>
+            <h3>Canadian Market Focus</h3>
+            <p>Our company is built around Canadian buyer expectations, giving suppliers a clearer path to understand pricing, presentation, trust, and market demand.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-number">03</div>
+            <h3>Trusted Sourcing</h3>
+            <p>For buyers, we simplify international sourcing by connecting them with suppliers and products that are reviewed, organized, and ready for serious discussions.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-number">04</div>
+            <h3>Long-Term Partnerships</h3>
+            <p>We are focused on sustainable business relationships, not one-time transactions. Our goal is to build repeatable trade channels that can grow over time.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-number">05</div>
+            <h3>Professional Presentation</h3>
+            <p>We understand that products need more than quality. Catalogs, pricing, packaging, communication, and company presentation all matter when approaching buyers.</p>
+          </div>
+
+          <div class="why-card reveal">
+            <div class="why-number">06</div>
+            <h3>Bridge Between Markets</h3>
+            <p>Crestline helps close the gap between international suppliers and Canadian businesses by creating a more organized, trustworthy, and practical trade process.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="apply" id="apply">
+      <div class="container apply-grid">
+        <div class="reveal">
+          <div class="eyebrow">Supplier Application</div>
+          <h2>Apply to Work With Crestline</h2>
+          <p>Complete the form with your company and product details. Our team will review your submission and contact selected suppliers for the next step.</p>
+        </div>
+
+        <form class="reveal" action="https://api.web3forms.com/submit" method="POST">
+          <input type="hidden" name="access_key" value="14bddeaa-516b-42bc-abab-fa1a7fca5d9b">
+          <input type="hidden" name="subject" value="New Supplier Application from Crestline Trade Group Website">
+          <input type="hidden" name="from_name" value="Crestline Trade Group Website">
+          <input type="checkbox" name="botcheck" style="display: none;">
+
+          <div class="form-row">
+            <div class="field">
+              <label>Name</label>
+              <input type="text" name="name" required>
+            </div>
+
+            <div class="field">
+              <label>Company</label>
+              <input type="text" name="company" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label>Email</label>
+              <input type="email" name="email" required>
+            </div>
+
+            <div class="field">
+              <label>Phone / WhatsApp</label>
+              <input type="tel" name="phone" required>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="field">
+              <label>Product Type</label>
+              <input type="text" name="product_type" required>
+            </div>
+
+            <div class="field">
+              <label>Country</label>
+              <input type="text" name="country" required>
+            </div>
+          </div>
+
+          <div class="field">
+            <label>Message</label>
+            <textarea name="message" placeholder="Tell us about your products and export readiness." required></textarea>
+          </div>
+
+          <button class="btn btn-gold" type="submit">Submit Request <span>→</span></button>
+        </form>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="container contact-grid">
+        <div class="reveal">
+          <h2>Let’s Build Something <span>Great Together.</span></h2>
+          <p>Whether you are a supplier looking to expand or a buyer looking for reliable products, we are here to connect.</p>
+          <a href="#apply" class="btn btn-gold" style="margin-top:22px;">Get in Touch <span>→</span></a>
+        </div>
+
+        <div class="contact-info reveal">
+          <div class="info-item">
+            <div class="info-icon">✉</div>
+            <div>
+              <h3>Email</h3>
+              <p>crestlinetradegroup@gmail.com</p>
+            </div>
+          </div>
+
+          <div class="info-item">
+            <div class="info-icon svg-contact-icon">
+              <svg viewBox="0 0 64 64" aria-hidden="true"><circle cx="32" cy="32" r="24"></circle><path d="M8 32h48M32 8c8 8 12 16 12 24S40 48 32 56M32 8C24 16 20 24 20 32s4 16 12 24M14 22h36M14 42h36"></path></svg>
+            </div>
+            <div>
+              <h3>Location</h3>
+              <p>Canada</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <a href="#home" class="brand">
+        <img src="logo.png" alt="Crestline Trade Group Logo" class="brand-logo">
+      </a>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#about">About Us</a>
+        <a href="#suppliers">For Suppliers</a>
+        <a href="#buyers">For Buyers</a>
+        <a href="#apply">Apply</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <p class="copyright">© 2026 Crestline Trade Group.<br>All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('open');
+    }
+
+    document.querySelectorAll('#navLinks a').forEach(link => {
+      link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('open'));
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>
